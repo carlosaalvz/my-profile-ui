@@ -2,14 +2,13 @@ import React from "react";
 import "./AppBody.scss";
 
 
-const AppBody: React.FC<{ header: string; quote?: string }> = ({
-  header,
-  quote,
+const AppBody: React.FC<{ intro: string; description?: string }> = ({
+  intro,
+  description,
 }) => (
     <section className="body-content">
-      <h1 className="typewriter">{header}</h1>
-      {
-        quote && <blockquote>{quote}</blockquote>
+      <h1>{intro}</h1> {
+        description && <blockquote>{description}</blockquote>
       }
     </section>
 );

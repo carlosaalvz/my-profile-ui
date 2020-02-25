@@ -1,34 +1,8 @@
-.body-content {
-    //max-width: 980px;
-    text-align: center;
-}
 
 .body-content {
-    h1 {
-        font: bold 80px Sans-Serif;
-        padding: 40px 0;
-      }
-
-      .typewriter{
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid transparent; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
-        animation: 
-          typing 3.5s steps(40, end),
-          blink-caret .75s step-end 7s;
-      }
-      
-      /* The typing effect */
-      @keyframes typing {
-        from { width: 0 }
-        to { width: 80% }
-      }
-      
-      /* The typewriter cursor effect */
-      @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: orange; }
-      }
+  text-align: center;
+  h1 {
+      font: bold 80px Sans-Serif;
+      padding: 40px 0;
+    }
 }
