@@ -1,8 +1,26 @@
 
 .body-content {
-  text-align: center;
-  h1 {
-      font: bold 80px Sans-Serif;
-      padding: 40px 0;
-    }
+  align-items: center;
+  margin: auto;
+  max-width: 980px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
+  .title1 {
+    font-size: 13;
+    line-height: 1.1;
+    margin:0;
+    padding-bottom: 20px;
+  }
+
+  .title2 {
+    font-size: 40px;
+    line-height: 1.1;
+    padding-bottom: 20px;
+  }
+  .description {
+    font-size: 40px;
+  }
 }

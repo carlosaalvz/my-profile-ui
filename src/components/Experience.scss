@@ -1,0 +1,43 @@
+.experience-container {
+    align-items: center;
+    margin: auto;
+    max-width: 980px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 300px;
+
+   
+    h3 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 10px 0 40px;
+        width: 100%;
+        white-space: nowrap;
+        border-radius: 3px solid #000;;
+
+        &:before {
+            counter-increment: section;
+            content: '0' counter(section) '.';
+            margin-right: 10px;
+            font-weight: normal;
+            //font-size: 90px;
+            position: relative;
+            bottom: 0px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 300px;
+            background-color: #2d3952;
+            position: relative;
+            //top: 1px;
+            margin-left: 20px;
+          }
+    }
+
+   
+}

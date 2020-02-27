@@ -6,10 +6,11 @@ import "./AppHeaderNavLink.scss";
 export type NavLink = {
   label: string;
   route: string;
+  key: string;
 };
 
-const AppHeaderNavLink: React.FC<NavLink> = React.memo(({ label }) => (
-  <span className="nav-link">{label}</span>
+const AppHeaderNavLink: React.FC<NavLink> = React.memo(({ label, route, key}) => (
+  <a href={route} className="nav-link">{label}</a>
 ));
 
 export default AppHeaderNavLink;

@@ -1,32 +1,36 @@
 import React from 'react';
 import AppHeader, { AppHeaderProps } from "../../containers/AppHeader";
-import AppBody from "../../containers/AppBody";
+import "./Profile.scss";
+import {About} from "../../components/About";
+import {Experience} from "../../components/Experience";
 
 const headerProps: AppHeaderProps = {
   logo: "ALVZ",
   links: [
     {
-      label: "Twitter",
-      route: "/logs/list"
+      label: "About",
+      route: "#about",
+      key: 'about'
     },
     {
-      label: "Github",
-      route: "/logs/create"
+      label: "Experience",
+      route: "#experience",
+      key: 'experience'
     }
   ]
 };
 
 const Profile: React.FC = () => (
-  <main className="App">
+  <section className="main-pages">
     <AppHeader
       logo={headerProps.logo}
       links={headerProps.links}
     />
-    <AppBody 
-      intro="Hey, I'm Carlos Alvarez" 
-      description={"I'm a software engineer based out of Dallas - Fort Worth, TX"}
-    />
-  </main>
+
+    <About/>
+
+    <Experience/>
+  </section>
 );
 
 
