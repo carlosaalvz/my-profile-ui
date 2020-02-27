@@ -1,3 +1,19 @@
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
 .about-container {
     align-items: center;
     margin: auto;
@@ -8,18 +24,18 @@
     padding-top: 20px;
 
     h1 {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: normal;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: -30px;
-        margin-left: 0px;
     }
 
     h2 {
         font-size: 65px;
         line-height: 1.1;
+        margin-top: -5px;
         margin-bottom: 20px;
+        @include for-phone-only {    
+            font-size: 30px; 
+        }
     }
 
     h3 {
@@ -28,6 +44,10 @@
         font-size: 55px;
         line-height: 1.1;
         color: #8892b0;
+
+        @include for-phone-only {    
+            font-size: 25px; 
+        }
     }
 
     .description {
@@ -35,5 +55,9 @@
         width: 50%;
         max-width: 500px;
         font-size: 20px;
+
+        @include for-phone-only {    
+            width: 75%; 
+        }
     }
 }
