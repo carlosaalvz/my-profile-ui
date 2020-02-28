@@ -1,24 +1,9 @@
 import React from 'react';
-import AppHeader, { AppHeaderProps } from "../../containers/AppHeader";
+import AppHeader from "../../containers/AppHeader";
 import "./Profile.scss";
-import {About} from "../../components/About";
+import About from "../../components/About";
 import {Experience} from "../../components/Experience";
-
-const headerProps: AppHeaderProps = {
-  logo: "ALVZ",
-  links: [
-    {
-      label: "About",
-      route: "#about",
-      key: 'about'
-    },
-    {
-      label: "Experience",
-      route: "#experience",
-      key: 'experience'
-    }
-  ]
-};
+import {headerProps} from "../../config/navigationLinks"
 
 const Profile: React.FC = () => (
   <section className="main-pages">
@@ -29,7 +14,6 @@ const Profile: React.FC = () => (
 
     <About/>
 
-    <Experience/>
   </section>
 );
 
