@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import "./About.scss";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Storage } from 'aws-amplify';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
+
+    const signedURL = Storage.get('Carlos Alvarez - SWE.pdf');
+
+    console.log(signedURL);
 
     useEffect(() => {
         const timeout = setTimeout(() => setShow(true), 500);
