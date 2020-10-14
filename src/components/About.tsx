@@ -6,18 +6,20 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
-    const [file, setFile] = useState('');
 
     useEffect(() => {
 
-        Storage.list('profilebucket205124-prod')
+        /*
+        Storage.get('public/Carlos Alvarez - SWE.pdf',{ download: false})
         .then(result => {
-            console.log("got a response");
-            console.log(result);
+            console.log("got a response")
+            // data.Body is a Blob
+           console.log(result);
         })
         .catch(err => {
             console.log(err);
         });
+        */
 
         const timeout = setTimeout(() => setShow(true), 500);
         return () => clearTimeout(timeout);
@@ -35,6 +37,9 @@ const About: React.FC = () => {
                             <div className="description">
                                 I'm a software engineer based out of Dallas-Fort Worth, TX specializing in building scaleable applications.
                             </div>
+                            <div className="description">                                
+                                <a href={'https://profilebucket205124-prod.s3.us-east-2.amazonaws.com/public/Carlos+Alvarez+-+SWE.pdf'}>Click to view Resume</a>
+                            </div>
                         </div>
                     </CSSTransition>
                 </section >
@@ -42,15 +47,8 @@ const About: React.FC = () => {
                 <div/>
             )}
             
-            {file !== '' ? (
-                <section id="about" className="about-container">
-                    <a href={file}/>
-                </section >
-            ) : (
-                <div/>
-            )}
         </TransitionGroup>
     );
 };
 
-export default withAuthenticator(About);
+export default About;
