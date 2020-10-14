@@ -5,12 +5,21 @@ import { Storage } from 'aws-amplify';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
-
-    const signedURL = Storage.get('Carlos Alvarez - SWE.pdf');
-
-    console.log(signedURL);
+    const [file, setFile] = useState('');
 
     useEffect(() => {
+
+        Storage.get('Carlos Alvarez - SWE.pdf',{ download: false })
+        .then(result => {
+            console.log("got a response")
+            // data.Body is a Blob
+            setFile(result.toString());
+           console.log(result);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
         const timeout = setTimeout(() => setShow(true), 500);
         return () => clearTimeout(timeout);
     }, []);
@@ -29,6 +38,14 @@ const About: React.FC = () => {
                             </div>
                         </div>
                     </CSSTransition>
+                </section >
+            ) : (
+                <div/>
+            )}
+            
+            {file !== '' ? (
+                <section id="about" className="about-container">
+                    <div>{file}</div>
                 </section >
             ) : (
                 <div/>
