@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "myprofileuic75ed6b4": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "s3profile": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}
