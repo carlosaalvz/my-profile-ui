@@ -1,4 +1,4 @@
-import Amplify from '@aws-amplify/core';
+import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 export function configureAmplify() {
