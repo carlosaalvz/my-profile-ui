@@ -9,6 +9,8 @@ export type AppHeaderProps = {
   links: NavLink[];
 };
 
+const resumePdfUrl = 'https://profilebucket205124-prod.s3.us-east-2.amazonaws.com/public/Carlos+Alvarez+-+SWE.pdf';
+
 const AppHeader: React.FC<AppHeaderProps> = React.memo(
   ({ logo, links }) => {
     return (
@@ -26,6 +28,12 @@ const AppHeader: React.FC<AppHeaderProps> = React.memo(
                 key={link.label}
               />
             ))}
+
+            <button> 
+              <a href={resumePdfUrl} target="_blank" rel="nofollow noopener noreferrer">
+                Resume
+              </a>
+            </button>
         </section>
       </header>
     );
