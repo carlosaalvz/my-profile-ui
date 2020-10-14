@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./About.scss";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Storage } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
@@ -9,12 +10,10 @@ const About: React.FC = () => {
 
     useEffect(() => {
 
-        Storage.get('Carlos Alvarez - SWE.pdf',{ download: false })
+        Storage.list('profilebucket205124-prod')
         .then(result => {
-            console.log("got a response")
-            // data.Body is a Blob
-            setFile(result.toString());
-           console.log(result);
+            console.log("got a response");
+            console.log(result);
         })
         .catch(err => {
             console.log(err);
@@ -45,7 +44,7 @@ const About: React.FC = () => {
             
             {file !== '' ? (
                 <section id="about" className="about-container">
-                    <div>{file}</div>
+                    <a href={file}/>
                 </section >
             ) : (
                 <div/>
@@ -54,4 +53,4 @@ const About: React.FC = () => {
     );
 };
 
-export default About;
+export default withAuthenticator(About);
