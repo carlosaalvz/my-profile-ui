@@ -7,6 +7,11 @@ export const headerProps: AppHeaderProps = {
             label: "About",
             route: "#about",
             key: 'about'
+        },
+        {
+            label: "Experience",
+            route: "#experience",
+            key: 'experience'
         }
     ]
 };

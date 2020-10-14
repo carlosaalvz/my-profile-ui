@@ -4,15 +4,15 @@ export function configureAmplify() {
   Amplify.configure(
   {
    Auth: {
-     identityPoolId: process.env.REACT_APP_identityPoolId,
-     region: process.env.REACT_APP_region,
-     userPoolId: process.env.REACT_APP_userPoolId,
-     userPoolWebClientId: process.env.REACT_APP_userPoolWebClientId,
+     identityPoolId: 'us-east-2:82573920-41e5-4c88-9464-628518156914',
+     region: 'us-east-2',
+     userPoolId: 'us-east-2_tRFhTtO5k',
+     userPoolWebClientId: '1d807s4hlgh5pig8vfb0ms11hv',
     },
   Storage: { 
-     bucket: process.env.REACT_APP_Bucket_name,
-     region: process.env.REACT_APP_region,
-     identityPoolId: process.env.REACT_APP_identityPoolId
+     bucket: 'profilebucket162840-prod',
+     region: 'us-east-2',
+     identityPoolId: 'us-east-2:82573920-41e5-4c88-9464-628518156914'
     }
   }
  );
