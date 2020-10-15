@@ -8,14 +8,15 @@ const About: React.FC = () => {
     const [show, setShow] = useState(false);
     
     useEffect(() => {
+        /* log in to s3, not needed right now
         Storage.list('Carlos Alvarez - SWE.pdf')
         .then(result => {
-            console.log("got a response")
             console.log(result);
         })
         .catch(err => {
             console.log(err);
         });
+        */
 
         const timeout = setTimeout(() => setShow(true), 500);
         return () => clearTimeout(timeout);
