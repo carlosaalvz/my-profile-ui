@@ -4,7 +4,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
-    
     useEffect(() => {
         const timeout = setTimeout(() => setShow(true), 500);
         return () => clearTimeout(timeout);
