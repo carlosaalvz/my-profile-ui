@@ -8,7 +8,7 @@ const About: React.FC = () => {
     const [show, setShow] = useState(false);
     
     useEffect(() => {
-        /* code to log in to s3, not needed right now
+        /* code to log in to s3 bucket, not needed right now
         Storage.list('Carlos Alvarez - SWE.pdf')
         .then(result => {
             console.log(result);
