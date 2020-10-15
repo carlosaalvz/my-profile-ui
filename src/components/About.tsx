@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import "./About.scss";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-//import { Storage } from 'aws-amplify';
-//import { withAuthenticator } from '@aws-amplify/ui-react';
+import { Storage } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
     
     useEffect(() => {
-        /* code to log in to s3 bucket, not needed right now
         Storage.list('Carlos Alvarez - SWE.pdf')
         .then(result => {
             console.log(result);
@@ -16,7 +15,6 @@ const About: React.FC = () => {
         .catch(err => {
             console.log(err);
         });
-        */
 
         const timeout = setTimeout(() => setShow(true), 500);
         return () => clearTimeout(timeout);
