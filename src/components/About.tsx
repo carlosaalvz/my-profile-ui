@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./About.scss";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { Storage } from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react';
+//import { Storage } from 'aws-amplify';
+//import { withAuthenticator } from '@aws-amplify/ui-react';
 
 const About: React.FC = () => {
     const [show, setShow] = useState(false);
