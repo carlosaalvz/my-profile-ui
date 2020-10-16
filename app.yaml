@@ -1,17 +1,27 @@
-env: standard    
-runtime: nodejs12   
-service: default    
-handlers:
-  - url: /static
-    static_dir: build/static
+runtime: python27
+   api_version: 1
+   threadsafe: true
 
-  - url: /assets
-    static_dir: build/assets
-
-  - url: /(.*\.(json|ico|js))$
-    static_files: build/\1
-    upload: build/.*\.(json|ico|js)$
-
-  - url: .*
-    static_files: build/index.html
-    upload: build/index.html
+   handlers:
+   - url: /
+     static_files: build/index.html
+     upload: build/index.html
+     secure: always
+   - url: /static
+     static_dir: build/static
+   - url: /manifest.json
+     static_files: build/manifest.json
+     upload: build/manifest.json
+   - url: /asset-manifest.json
+     static_files: build/asset-manifest.json
+     upload: build/asset-manifest.json
+   - url: /service-worker.json
+     static_files: build/service-worker.json
+     upload: build/service-worker.json
+   - url: /pageIcon.png
+     static_files: build/pageIcon.png
+     upload: build/pageIcon.png
+   - url: /.*
+     static_files: build/index.html
+     upload: build/index.html
+     secure: always
