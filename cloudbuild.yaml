@@ -1,4 +1,18 @@
 steps:
+
+# Step 0: npm install
+- name: "gcr.io/cloud-builders/npm"
+  dir: './'
+  args: ['install']
+  timeout: "5m"
+
+# Step 1: FRONTEND optimized build
+- name: "gcr.io/cloud-builders/npm"
+  dir: './'
+  args: ["run", "build"]
+  timeout: "5m"
+
+# Deploy
 - name: "gcr.io/cloud-builders/gcloud"
   entrypoint: bash
   args: 
