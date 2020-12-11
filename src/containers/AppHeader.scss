@@ -1,25 +1,24 @@
   @import '../modules/variables';
+  @import '../modules/media';
+  @import '../styles/color-palette';
 
   .app-header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     box-sizing: border-box;
+    margin: auto;
     padding: 10 * $unit 15px;
-    position: sticky;
     z-index: 1;
     width: 100%;
-    color: #ccd6f6;
+    color: colorSelector('primary','primary-text'); 
 
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      font-size: 16px;
+    @include for-phone-only {    
+      font-size: 11px; 
     }
 
     .resume-button {
-      color: #64ffda;
+      color: colorSelector('primary','glow-green');
       width: max-content;
       height: max-content;
       padding: 10px 15px;
@@ -35,11 +34,21 @@
       &:hover,
       &:focus,
       &:active {
-        background-color: #003566;
+        background-color: colorSelector('others','transGreen');
         outline: none;
       }
       &:after {
         display: none !important;
+      }
+
+      a {
+        font-size: 16px;
+        text-decoration: none;
+        color: inherit;
+
+        @include for-phone-only {    
+          font-size: 11px; 
+        }
       }
     }
   }
