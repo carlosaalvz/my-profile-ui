@@ -5,8 +5,9 @@
     flex-direction: row;
     justify-content: flex-end;
     box-sizing: border-box;
-    padding: 10 * $unit;
-    z-index: 0;
+    padding: 10 * $unit 15px;
+    position: sticky;
+    z-index: 1;
     width: 100%;
     color: #ccd6f6;
 
