@@ -1,11 +1,12 @@
 .experience-container {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     max-width: 980px;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 300px;
+    padding-top: 100px;
 
    
     h3 {
@@ -15,6 +16,7 @@
         margin: 10px 0 40px;
         width: 100%;
         white-space: nowrap;
+        color: #ccd6f6;;
         border-radius: 3px solid #000;;
 
         &:before {

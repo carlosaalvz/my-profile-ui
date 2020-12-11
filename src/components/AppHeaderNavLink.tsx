@@ -10,7 +10,7 @@ export type NavLink = {
 };
 
 const AppHeaderNavLink: React.FC<NavLink> = React.memo(({ label, route, key}) => (
-  <a href={route} className="nav-link">{label}</a>
+  <a href={route} className="navigation-item">{label}</a>
 ));
 
 export default AppHeaderNavLink;

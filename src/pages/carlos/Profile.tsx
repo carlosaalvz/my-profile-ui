@@ -6,15 +6,13 @@ import {Experience} from "../../components/Experience";
 import {headerProps} from "../../config/navigationLinks"
 
 const Profile: React.FC = () => (
-  <div className="main-pages">
+  <div className="profile">
     <AppHeader
       logo={headerProps.logo}
       links={headerProps.links}
     />
-
     <About/>
     <Experience/>
-
   </div>
 );
 

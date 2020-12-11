@@ -1,31 +1,33 @@
+  @import '../modules/variables';
 
-  header {
-    backdrop-filter: blur(8px);
-    max-width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
   .app-header {
-    align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin: auto;
-    max-width: 980px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 10 * $unit;
+    z-index: 0;
+    width: 100%;
+    color: #ccd6f6;
 
-    button {
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 16px;
+    }
+
+    .resume-button {
+      color: #64ffda;
+      width: max-content;
+      height: max-content;
       padding: 10px 15px;
-      left:10px;
+      margin: -5px 0px 0px 50px;
       position: relative;
       background-color: transparent;
       border: 1px solid;
       border-radius: 3px;
       line-height: 1;
-      text-decoration: none;
       cursor: pointer;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     

@@ -14,12 +14,7 @@ const resumePdfUrl = 'http://profilebucket205124-prod.s3.amazonaws.com/public/Ca
 const AppHeader: React.FC<AppHeaderProps> = React.memo(
   ({ logo, links }) => {
     return (
-      <header className="app-header">
-        <section className="app-title">
-          <h1>{logo}</h1>
-        </section>
-
-        <section className="navigation">
+      <div className="app-header">
           {links &&
             links.map((link: NavLink) => (
               <AppHeaderNavLink
@@ -29,13 +24,12 @@ const AppHeader: React.FC<AppHeaderProps> = React.memo(
               />
             ))}
 
-            <button> 
+            <button className="resume-button"> 
               <a href={resumePdfUrl} target="_blank" rel="nofollow noopener noreferrer">
                 Resume
               </a>
             </button>
-        </section>
-      </header>
+      </div>
     );
   }
 );

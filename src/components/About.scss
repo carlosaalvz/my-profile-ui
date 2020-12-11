@@ -1,48 +1,51 @@
 @import '../modules/media';
+@import '../styles/color-palette';
 
 .about-container {
-    align-items: center;
-    margin: auto;
-    max-width: 1000px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   max-width: 980px;
+   padding-bottom: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 100px;
 
-    h1 {
+    .greeting {
         font-size: 20px;
         font-weight: normal;
-        color: #64ffda;
+        color: colorSelector('primary','glow-green');
+
     }
 
-    h2 {
+    .name {
         font-size: 65px;
         line-height: 1.1;
         margin-top: 25px;
         margin-bottom: 20px;
-        color: #ccd6f6;
+        color: colorSelector('others','lightestSlate');
         @include for-phone-only {    
             font-size: 30px; 
         }
     }
 
-    h3 {
+    .description {
         width: 75%;
         margin: 0;
-        font-size: 55px;
+        font-size: 32px;
         line-height: 1.1;
-        color: #8892af;
+        color: colorSelector('primary','slate');
 
         @include for-phone-only {    
             font-size: 25px; 
         }
     }
 
-    .description {
+    .location {
         margin-top: 40px;
         max-width: 900px;
         font-size: 20px;
-        color: #8892af;
+        color: colorSelector('primary','slate');
 
         @include for-phone-only {    
             width: 75%; 
