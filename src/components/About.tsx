@@ -14,9 +14,9 @@ const About: React.FC = () => {
     return (
         <TransitionGroup component={null}>
         {show ? (
-                <div>
+                <div className="about-container">
                     <CSSTransition in={show} classNames="fade" timeout={3000}>
-                        <section id="about" className="about-container"> 
+                        <section id="about"> 
                             <div className="greeting">Hello, my name is</div>
                             <div className="name">Carlos Alvarez.</div>
                             <div className="description">Welcome to my profile, I use this as an outlet to build and expirement with new technology.</div>
