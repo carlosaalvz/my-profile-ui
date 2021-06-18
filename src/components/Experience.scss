@@ -6,7 +6,7 @@
     flex-direction: column;
     box-sizing: border-box;
     max-width: 980px;
-    padding: 10 * $unit;
+    padding: 0px 150px;
 
     @include for-phone-only {   
         font-size: 11px; 
@@ -17,7 +17,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        margin: 10px 0 40px;
+        //margin: 10px 0 40px;
         width: 100%;
         white-space: nowrap;
         color: #ccd6f6;;

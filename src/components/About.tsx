@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import "./About.scss";
-import {Page} from './Page';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const About: React.FC = () => {
