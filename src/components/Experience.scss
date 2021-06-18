@@ -8,8 +8,13 @@
     max-width: 980px;
     padding: 0px 150px;
 
-    @include for-phone-only {   
+    @include for-phone-only {  
+        padding: 0 40px; 
         font-size: 11px; 
+    }
+
+    & > section {
+        padding: 20 * $unit;
     }
 
    
