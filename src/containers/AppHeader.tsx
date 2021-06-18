@@ -9,7 +9,7 @@ export type AppHeaderProps = {
   links: NavLink[];
 };
 
-const resumePdfUrl = 'http://profilebucket205124-prod.s3.amazonaws.com/public/Carlos+Alvarez+-+SWE.pdf';
+const resumePdfUrl = 'http://profilebucket205124-prod.s3.amazonaws.com/public/Carlos+Alvarez+SWE+2021.pdf';
 
 const AppHeader: React.FC<AppHeaderProps> = React.memo(
   ({ logo, links }) => {
